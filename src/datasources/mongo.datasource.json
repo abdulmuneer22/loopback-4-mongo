@@ -1,0 +1,10 @@
+{
+  "name": "mongo",
+  "connector": "mongodb",
+  "url": "",
+  "host": "127.0.0.1",
+  "port": 27017,
+  "user": "runway-dev-user",
+  "password": "runway~d3v~7406",
+  "database": "runway-remote-dev"
+}
