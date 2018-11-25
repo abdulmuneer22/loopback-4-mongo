@@ -27,7 +27,8 @@
     "posttest": "npm run lint",
     "test:dev": "lb-mocha --allow-console-logs dist/test/**/*.js && npm run posttest",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "SET ENVFILE=.env && node .",
+    "start-dev":"SET ENVFILE=.env && node .",
     "prepublishOnly": "npm run test"
   },
   "repository": {
@@ -52,6 +53,7 @@
     "@loopback/rest": "^1.3.1",
     "@loopback/rest-explorer": "^1.1.1",
     "@loopback/service-proxy": "^1.0.2",
+    "dotenv": "^6.1.0",
     "loopback-connector-mongodb": "^4.0.0"
   },
   "devDependencies": {

@@ -1,3 +1,4 @@
+require('dotenv').config();
 import {UserManagementApplication} from './application';
 import {ApplicationConfig} from '@loopback/core';
 

@@ -21,7 +21,7 @@ import {TodoRepository} from '../repositories';
 export class TodoController {
   constructor(
     @repository(TodoRepository)
-    public todoRepository : TodoRepository,
+    public todoRepository: TodoRepository,
   ) {}
 
   @post('/todos', {
@@ -118,5 +118,11 @@ export class TodoController {
   })
   async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.todoRepository.deleteById(id);
+  }
+
+  //Custom end point
+  @get('/todos/customEndpoint')
+  async customMethod() {
+    return 'Hello World';
   }
 }
